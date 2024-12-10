@@ -1,0 +1,13 @@
+--z próba
+x = [692, 693, 699, 708, 686, 695, 703, 682, 708, 698];
+[h,p,ci,zval] = ztest(x,700,9)
+(mean(x)-700)/10*sqrt(length(x))
+alpha = 0.1;
+cval = norminv(1-alpha/2);
+[-cval cval]
+
+--t próba
+test1 = [39, 38.6, 43.4, 41.6, 43.1, 43.9, 42.8, 39.4]
+[h,~,~,stats] = ttest(test1, 40)
+alpha = 0.02;
+cval = tinv(1-alpha/2, 7)
