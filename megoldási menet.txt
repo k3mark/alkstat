@@ -7,7 +7,7 @@ szoras = std(data)
 f0 = mean(data<0)
 
 m = max(data);
-City(tempc == m)
+City(data == m)
 
 --z próba
 x = [692, 693, 699, 708, 686, 695, 703, 682, 708, 698];
