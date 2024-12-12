@@ -1,3 +1,14 @@
+--lap 7
+tampc = (JanTemp -32)/1.8;
+fk = quantile(Lat, .75)
+data = tempc(Lat < fk);
+atlag = mean(data)
+szoras = std(data)
+f0 = mean(data<0)
+
+m = max(data);
+City(tempc == m)
+
 --z próba
 x = [692, 693, 699, 708, 686, 695, 703, 682, 708, 698];
 [h,p,ci,zval] = ztest(x,700,9)
@@ -11,3 +22,11 @@ test1 = [39, 38.6, 43.4, 41.6, 43.1, 43.9, 42.8, 39.4]
 [h,~,~,stats] = ttest(test1, 40)
 alpha = 0.02;
 cval = tinv(1-alpha/2, 7)
+
+--lab8+
+x =[480, 499, 500, 489, 493, 498, 481, 481, 498];
+m0 = 500;
+sig = 9;
+alfa = 0.08;
+[h,p,ci,zval] = ztest(x,m0,sig,'Alpha',alfa, 'Tail','left') //left kisebb, right nagyobb, bots, nem egyenlő
+norminv(alfa)
