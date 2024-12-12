@@ -30,3 +30,19 @@ sig = 9;
 alfa = 0.08;
 [h,p,ci,zval] = ztest(x,m0,sig,'Alpha',alfa, 'Tail','left') //left kisebb, right nagyobb, both egyenlő
 norminv(alfa)
+
+--9/1
+k = [130,148,153,143,148,178]; //kapott értékek
+r = [150,150,150,150,150,150]; //várt
+alpha = 0.1; //alpha
+[h,p,stats] = chi2gof(1:6,r,k,alpha); //1:6->hány rész, várt, kapott értékek
+chi2inv(1-alpha, 5); //1-alpha, kapott érték-1
+
+--9/2
+haj =  [34,28,1;
+        8,52,23;
+        26,22,6]; kapott értékek soronkét
+
+alpha = 0.07;
+[h,p,chi] =chi2cont(haj, alpha) 
+chi2inv(1-alpha, 2*2) második érték sor-1*oszlop-1
