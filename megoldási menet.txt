@@ -28,5 +28,5 @@ x =[480, 499, 500, 489, 493, 498, 481, 481, 498];
 m0 = 500;
 sig = 9;
 alfa = 0.08;
-[h,p,ci,zval] = ztest(x,m0,sig,'Alpha',alfa, 'Tail','left') //left kisebb, right nagyobb, bots, nem egyenlő
+[h,p,ci,zval] = ztest(x,m0,sig,'Alpha',alfa, 'Tail','left') //left kisebb, right nagyobb, both egyenlő
 norminv(alfa)
